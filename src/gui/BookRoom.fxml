@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus.BookRoomController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <HBox prefHeight="28.0" prefWidth="980.0" style="-fx-background-color: #00CCFF;">
+         <children>
+            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Room">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" spacing="10.0">
+         <children>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" spacing="10.0">
+               <children>
+                  <StackPane alignment="TOP_LEFT" prefHeight="211.0" prefWidth="400.0">
+                     <children>
+                        <Group>
+                           <children>
+                              <GridPane fx:id="gridDetail_BookRoom" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="400.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID:" wrappingWidth="80.072265625">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="80.072265625" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Government ID:" wrappingWidth="87.072265625" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" wrappingWidth="105.072265625" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" wrappingWidth="65.072265625" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="txtCustomerId_BookRoom" editable="false" prefHeight="0.0" prefWidth="110.0" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <TextField fx:id="txtName_BookRoom" prefHeight="0.0" prefWidth="110.0" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </TextField>
+                                    <ComboBox fx:id="cbbCustomerTypeDetail_BookRoom" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <TextArea fx:id="txtAddressDetail_BookRoom" prefHeight="45.0" prefWidth="320.0" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextField fx:id="txtGovernmentIdDetail_BookRoom" prefHeight="0.0" prefWidth="110.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin>
+                                    </TextField>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="79.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="136.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="45.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.0" minWidth="10.0" prefWidth="139.0" />
+                                 </columnConstraints>
+                                 <padding>
+                                    <Insets top="15.0" />
+                                 </padding>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Group>
+                     </children>
+                  </StackPane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: #DDDDDD;" />
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="400.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date: " wrappingWidth="50.875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtDate_BookRoom" editable="false" prefHeight="25.0" prefWidth="182.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableBookRoom" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnRoomName_BookRoom" editable="false" prefWidth="75.0" sortable="false" text="Room's Name" />
+                      <TableColumn fx:id="tableColumnNumberOfGuest_BookRoom" prefWidth="75.0" sortable="false" text="Number of guest" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="33.0" prefWidth="400.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="btnOK_BookRoom" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="OK" />
+                        <Button fx:id="btnCancel_BookRoom" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Cancel" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="3.0" style="-fx-background-color: #DDDDDD;" />
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="900.0" spacing="10.0">
+               <children>
+                  <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" prefHeight="1000.0">
+                     <content>
+                        <FlowPane fx:id="flowPane" hgap="20.0" prefWidth="200.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
