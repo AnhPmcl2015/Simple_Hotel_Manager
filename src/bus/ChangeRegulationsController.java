@@ -142,41 +142,90 @@ public class ChangeRegulationsController implements Initializable{
 		});
 		
 		btnOK_ChagingSurcharge.setOnMouseClicked(e->{
-			changeSurcharge();
+			
+			try {
+				float a = Float.parseFloat(txtNewValue_ChangingSurcharge.getText());
+				changeSurcharge(a);
+			}catch(Exception e1) {
+				Alert dialog = new Alert(AlertType.WARNING);
+				dialog.setTitle("Error");
+				dialog.setHeaderText("Surcharge must be a number");
+				dialog.showAndWait();
+			}
 		});
 		
-		txtNewValue_ChangingMaximumGuest.addEventHandler(KeyEvent.KEY_PRESSED, e->{
+		txtNewValue_ChangingSurcharge.addEventHandler(KeyEvent.KEY_PRESSED, e->{
 			if(e.getCode() == KeyCode.ENTER) {
-				changeSurcharge();
+				try {
+					float a = Float.parseFloat(txtNewValue_ChangingSurcharge.getText());
+					changeSurcharge(a);
+				}catch(Exception e1) {
+					Alert dialog = new Alert(AlertType.WARNING);
+					dialog.setTitle("Error");
+					dialog.setHeaderText("Surcharge must be a number");
+					dialog.showAndWait();
+				}
 			}
 		});
 		
 		btnOK_ChangingMaximumGuest.setOnMouseClicked(e->{
-			changeMaximumGuests();
+			try {
+				Integer a = Integer.parseInt(txtNewValue_ChangingMaximumGuest.getText());
+				changeMaximumGuests(a);
+			}catch(Exception e1) {
+				Alert dialog = new Alert(AlertType.WARNING);
+				dialog.setTitle("Error");
+				dialog.setHeaderText("Maximun guest must be a number");
+				dialog.showAndWait();
+			}
 		});
 		
 		txtNewValue_ChangingMaximumGuest.addEventHandler(KeyEvent.KEY_PRESSED, e->{
 			if(e.getCode() == KeyCode.ENTER) {
-				changeMaximumGuests();
+				try {
+					Integer a = Integer.parseInt(txtNewValue_ChangingMaximumGuest.getText());
+					changeMaximumGuests(a);
+				}catch(Exception e1) {
+					Alert dialog = new Alert(AlertType.WARNING);
+					dialog.setTitle("Error");
+					dialog.setHeaderText("Maximun guest must be a number");
+					dialog.showAndWait();
+				}
 			}
 		});
 		
 		btnOK_ChangingRate.setOnMouseClicked(e->{
-			changeRate();
+			try {
+				float a = Float.parseFloat(txtNewValue_ChangingRate.getText());
+				changeRate(a);
+			}catch(Exception e1) {
+				Alert dialog = new Alert(AlertType.WARNING);
+				dialog.setTitle("Error");
+				dialog.setHeaderText("Rate must be a number");
+				dialog.showAndWait();
+			}
 		});
 		
 		txtNewValue_ChangingRate.addEventHandler(KeyEvent.KEY_PRESSED, e->{
 			if(e.getCode() == KeyCode.ENTER) {
-				changeRate();
+				try {
+					float a = Float.parseFloat(txtNewValue_ChangingRate.getText());
+					changeRate(a);
+				}catch(Exception e1) {
+					Alert dialog = new Alert(AlertType.WARNING);
+					dialog.setTitle("Error");
+					dialog.setHeaderText("Rate must be a number");
+					dialog.showAndWait();
+				}
 			}
 		});
 	}
 	
 	
-	private void changeSurcharge() {
+	private void changeSurcharge(float a) {
 		if(!"".equals(txtNewValue_ChangingSurcharge.getText())) {
 			try {
-				TemplateDAO.changeSurcharge(Float.parseFloat(txtNewValue_ChangingSurcharge.getText()));
+				TemplateDAO.changeSurcharge(a);
 			} catch (NumberFormatException | SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -187,10 +236,10 @@ public class ChangeRegulationsController implements Initializable{
 		}
 	}
 	
-	private void changeMaximumGuests() {
+	private void changeMaximumGuests(int a) {
 		if(!"".equals(txtNewValue_ChangingMaximumGuest.getText())) {
 			try {
-				TemplateDAO.changeMaximumGuests(Integer.parseInt(txtNewValue_ChangingMaximumGuest.getText()));
+				TemplateDAO.changeMaximumGuests(a);
 			} catch (NumberFormatException | SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -200,10 +249,10 @@ public class ChangeRegulationsController implements Initializable{
 		}
 	}
 	
-	private void changeRate() {
+	private void changeRate(float a) {
 		if(!"".equals(txtNewValue_ChangingRate.getText())) {
 			try {
-				CustomerTypeDAO.changeRate(Float.parseFloat(txtNewValue_ChangingRate.getText()));
+				CustomerTypeDAO.changeRate(a);
 			} catch (NumberFormatException | SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

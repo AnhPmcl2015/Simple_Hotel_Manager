@@ -15,7 +15,7 @@
    <children>
       <HBox prefHeight="28.0" prefWidth="980.0" style="-fx-background-color: #00CCFF;">
          <children>
-            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Room">
+            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Booking Room">
                <font>
                   <Font name="System Bold" size="40.0" />
                </font>
